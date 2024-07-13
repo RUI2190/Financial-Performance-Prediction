@@ -6,5 +6,5 @@ Renewable Energy and Clean Tech Companies:
 4. Brookfield Renewable Partners
 5. Enphas Energy
 6. SunPower Corporation
-7. Vestas Wind Systems (Danish)
+
    
