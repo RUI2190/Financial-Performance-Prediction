@@ -5,6 +5,6 @@ Renewable Energy and Clean Tech Companies:
 3. First Solar
 4. Brookfield Renewable Partners
 5. Enphas Energy
-6. SunPower Corporation
+6. SunPower Corporation - no 2023 Q4 (no Annual Report)
 
    
