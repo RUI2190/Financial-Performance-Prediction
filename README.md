@@ -8,3 +8,5 @@ Renewable Energy and Clean Tech Companies:
 6. SunPower Corporation - no 2023 Q4 (no Annual Report)
 
    
+#Stock Price EDA
+1. closing price
