@@ -14,3 +14,10 @@ Renewable Energy and Clean Tech Companies:
 3. trading volume
 4. moving averages
 5. exponential moving averages
+
+# Indicator Analysis
+1. Moving Averages (SMA, EMA, Usage - Identifies trends and potential reversal points. Commonly used moving averages are 50-day and 200-day SMAs.)
+2. Momentum Indicators: (Relative Strength Index (RSI), Stochastic Oscillator)
+3. Trend Indicators: Moving Average Convergence Divergence (MACD), Average Directional Index (ADX):
+4. Volatility: Bollinger Bands, Average True Range (ATR)
+5. Volume: On-Balance Volume (OBV), Volume Moving Average
