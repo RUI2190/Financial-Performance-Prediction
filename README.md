@@ -1,11 +1,35 @@
-# Financial Performance Prediction
-Renewable Energy and Clean Tech Companies:
+# Portfolio Asset Suggestion
+provide 
 1. NextEra Energy
 2. Tesla
 3. First Solar
 4. Brookfield Renewable Partners
 5. Enphas Energy
 6. SunPower Corporation - no 2023 Q4 (no Annual Report)
+
+# Portfolio Optimization
+1. Differences between each models 
+
+Black-Litterman Model:
+Prior
+View
+
+Markowitz Model: 
+
+Hierachical risk parity: historical stock return\
+
+# Short / Long term suggestion
+
+# Customer Input:
+Companies preferences
+Stock preferences
+Expected Return
+Acceptable Risk
+time??
+
+
+
+
 
    
 # Stock Price EDA
