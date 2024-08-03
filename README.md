@@ -1,21 +1,40 @@
-# Financial Performance Prediction
-Stock price analysis
-depends on:
-1. Company Financial health with Balance Sheet, Cash Flow, Debt Levels
-2. Company performance from earning reports (profitability, revenue, expenses)
-3. Market Sentiment: investor sentiment + news report (analyst report) + sector trends
-4. Macroeconomics: overall interest rate / inflation, GDP growth
 
-
-
-
-Sector: Renewable Energy and Clean Tech Companies:
 1. NextEra Energy
 2. Tesla
 3. First Solar
 4. Brookfield Renewable Partners
 5. Enphas Energy
 6. SunPower Corporation - no 2023 Q4 (no Annual Report)
+
+# Portfolio Optimization
+1. Differences between each models 
+
+Black-Litterman Model:
+Prior
+View
+
+Markowitz Model: 
+
+Hierachical risk parity: historical stock return
+
+
+
+
+# Short / Long term suggestion
+
+# Customer Input:
+Companies preferences
+Stock preferences
+Expected Return
+Acceptable Risk
+time??
+
+# Repositories used:
+https://github.com/robertmartin8/PyPortfolioOpt
+https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-portfolio-theory.ipynb
+
+
+
 
    
 # Stock Price EDA
