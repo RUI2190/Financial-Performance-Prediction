@@ -16,7 +16,10 @@ View
 
 Markowitz Model: 
 
-Hierachical risk parity: historical stock return\
+Hierachical risk parity: historical stock return
+
+
+
 
 # Short / Long term suggestion
 
@@ -27,6 +30,9 @@ Expected Return
 Acceptable Risk
 time??
 
+# Repositories used:
+https://github.com/robertmartin8/PyPortfolioOpt
+https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-portfolio-theory.ipynb
 
 
 
