@@ -1,5 +1,4 @@
-# Portfolio Asset Suggestion
-provide 
+
 1. NextEra Energy
 2. Tesla
 3. First Solar
@@ -51,3 +50,7 @@ https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-por
 3. Trend Indicators: Moving Average Convergence Divergence (MACD), Average Directional Index (ADX):
 4. Volatility: Bollinger Bands, Average True Range (ATR)
 5. Volume: On-Balance Volume (OBV), Volume Moving Average
+
+
+
+# News / Sentiment Analysis
