@@ -9,16 +9,17 @@
 # Portfolio Optimization
 1. Differences between each models 
 
-Black-Litterman Model:
-Prior
-View
+Black-Litterman Model
+Markowitz Model
+Hierachical risk parity
 
-Markowitz Model: 
+# Stock Price Return Prediction
+Expected Return Prediction:
+1. Statistical Finance Models: ARIMA, GARCH
+2. Machine Learning Models: Linear Regression, Random Forest, XGBoost
+3. Neural Network Model: Monte Carlo Dropout
 
-Hierachical risk parity: historical stock return
-
-
-
+# Baseline Result
 
 # Short / Long term suggestion
 
