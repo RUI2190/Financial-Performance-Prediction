@@ -1,7 +1,7 @@
 # Portfolio Optimization Platform using Machine Learning Models
 
 ## Financial Models for Portfolio Optimization
-To approach the optimzation problem of achieving a higher return while lower risk, we go back to these classic models:
+To approach the optimzation problem of achieving a higher return while lower risk, we go back to these classic models:<br>
 Black-Litterman Model <br>
 Markowitz Model<br>
 Hierachical risk parity
