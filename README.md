@@ -46,6 +46,9 @@ https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-por
 4. moving averages
 5. exponential moving averages
 
+![Screenshot](./Visualization/Stock_prediction/decision_tree_predictions.png)
+
+
 # Indicator Analysis
 1. Moving Averages (SMA, EMA, Usage - Identifies trends and potential reversal points. Commonly used moving averages are 50-day and 200-day SMAs.)
 2. Momentum Indicators: (Relative Strength Index (RSI), Stochastic Oscillator)
@@ -53,6 +56,3 @@ https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-por
 4. Volatility: Bollinger Bands, Average True Range (ATR)
 5. Volume: On-Balance Volume (OBV), Volume Moving Average
 
-
-
-# News / Sentiment Analysis
