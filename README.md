@@ -2,8 +2,8 @@
 
 ## Financial Models for Portfolio Optimization
 To approach the optimzation problem of achieving a higher return while lower risk, we go back to these classic models:
-Black-Litterman Model
-Markowitz Model
+Black-Litterman Model <br>
+Markowitz Model<br>
 Hierachical risk parity
 
 ## View Matrix and Uncertainty Matrix Generation
