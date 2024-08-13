@@ -7,34 +7,30 @@ Markowitz Model<br>
 Hierachical risk parity
 
 ## View Matrix and Uncertainty Matrix Generation
-We used three types of models to generate the best **view matrix** and **uncertainty matrix** for Black-Litterman Model
+We used three types of models to generate the best **view matrix** and **uncertainty matrix** for Black-Litterman Model.
 
-Expected Return Prediction:
+We picked **stock price return** as the proxy for the two matrices mentioned above.
+
+### Expected Return Prediction:
 1. Statistical Finance Models: ARIMA, GARCH
 2. Machine Learning Models: Linear Regression, Random Forest, XGBoost
 3. Neural Network Model: Monte Carlo Dropout
 
 
+## Baseline Result
 
-1. NextEra Energy
-2. Tesla
-3. First Solar
-4. Brookfield Renewable Partners
-5. Enphas Energy
-6. SunPower Corporation - no 2023 Q4 (no Annual Report)
+## Short / Long term suggestion
 
 
-# Baseline Result
-
-# Short / Long term suggestion
-
-# Customer Input:
+# User Interface
 Companies preferences
 Stock preferences
 Expected Return
 Acceptable Risk
 time??
 
+
+# API
 # Repositories used:
 https://github.com/robertmartin8/PyPortfolioOpt
 https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-portfolio-theory.ipynb
