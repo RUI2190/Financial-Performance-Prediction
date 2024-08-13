@@ -1,3 +1,9 @@
+# Portfolio Optimization Platform using Machine Learning Models
+
+
+
+
+
 
 1. NextEra Energy
 2. Tesla
@@ -6,7 +12,7 @@
 5. Enphas Energy
 6. SunPower Corporation - no 2023 Q4 (no Annual Report)
 
-# Portfolio Optimization
+## Portfolio Optimization
 1. Differences between each models 
 
 Black-Litterman Model
