@@ -46,7 +46,7 @@ https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-por
 4. moving averages
 5. exponential moving averages
 
-![Screenshot](./Visualization/Stock_prediction/decision_tree_predictions.png)
+![Screenshot](./Stock_prediction/Brookfield_decision_tree_predictions.png)
 
 
 # Indicator Analysis
