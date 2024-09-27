@@ -8,13 +8,12 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 
 # Function to preprocess data
-def preprocess_data(df):
+def preprocess_data(df, shift=100):
     df['Date'] = pd.to_datetime(df.index)
     df.set_index('Date', inplace=True)
-    df['Future_Return'] = df['Adj Close'].shift(-100) / df['Adj Close'] - 1
+    df['Future_Return'] = df['Adj Close'].shift(-shift) / df['Adj Close'] - 1
     df = df.dropna(subset=['Future_Return'])
-    df['SMA_5'] = df['Adj Close'].rolling(window=5).mean()
-    df['SMA_200'] = df['Adj Close'].rolling(window=200).mean()
+    df.loc[:, 'SMA_5'] = df['Adj Close'].rolling(window=5).mean()
     df = df.dropna()
     features = ['Open', 'High', 'Low', 'Adj Close', 'Volume', 'SMA_5']
     X = df[features]
@@ -44,10 +43,10 @@ def train_and_predict(X_train, y_train, X_test, n_iterations=100):
 # Function to preprocess data and split into training and testing sets
 def split_data(company_data, shift=100):
     X, y = preprocess_data(company_data)
-    train_size = int(len(X) - 100)
+    train_size = int(len(X) - shift)
     return (X[:train_size], X[train_size:], y[:train_size], y[train_size:])
 
-def get_views(tickers, start_date="2021-12-31", end_date="2024-03-31", models=['Linear Regression', 'Random Forest', 'XGBoost']):
+def get_views(tickers, start_date="2022-12-31", end_date="2024-03-31", models=['Linear Regression', 'Random Forest', 'XGBoost']):
     # Download historical data for each stock
     companies_data = []
     for ticker in tickers:
@@ -60,9 +59,8 @@ def get_views(tickers, start_date="2021-12-31", end_date="2024-03-31", models=['
 
     # Initialize matrices to store results
     n_companies = len(tickers)
-    n_models = len(models)
     returns_dict = {model: [0]*n_companies for model in models}
-    confidence_intervals_dict = {model: np.zeros((n_models, 2)).tolist() for model in models}  # lower and upper bounds
+    confidence_intervals_dict = {model: [[0, 0] for _ in range(n_companies)] for model in models}  # lower and upper bounds
     uncertainty_dict = {model: [0]*n_companies for model in models}
 
     # Train models and calculate predictions
@@ -77,15 +75,15 @@ def get_views(tickers, start_date="2021-12-31", end_date="2024-03-31", models=['
             returns_dict[model][i] = predictions[model].mean()
 
             # Store confidence intervals (95% CI)
-            confidence_intervals_dict[model][i, 0] = predictions[model].mean() - 1.96 * uncertainties[model].mean()
-            confidence_intervals_dict[model][i, 1] = predictions[model].mean() + 1.96 * uncertainties[model].mean()
+            confidence_intervals_dict[model][i][0] = predictions[model].mean() - 1.96 * uncertainties[model].mean()
+            confidence_intervals_dict[model][i][1] = predictions[model].mean() + 1.96 * uncertainties[model].mean()
 
             # Calculate uncertainty as the width of the confidence interval
-            uncertainty_dict[model][i] = confidence_intervals_dict[model][i, 1] - confidence_intervals_dict[model][i, 0]
+            uncertainty_dict[model][i] = confidence_intervals_dict[model][i][1] - confidence_intervals_dict[model][i][0]
     return returns_dict, confidence_intervals_dict, uncertainty_dict
 
 # Download historical data for each stock
-def combined_data(tickers, start_date="2021-12-31", end_date="2024-03-31", risk_free_rate=0.02, save=False, output_dir="./"):
+def combined_data(tickers, start_date="2022-12-31", end_date="2024-03-31", risk_free_rate=0.02, save=False, output_dir="./"):
     data = {}
     for ticker in tickers:
         data[ticker] = yf.download(ticker, start=start_date, end=end_date)[['Open', 'Adj Close']]

@@ -5,8 +5,8 @@ import yfinance as yf
 from pypfopt import EfficientFrontier, risk_models, black_litterman, BlackLittermanModel
 
 def Blacklitterman_weights(S, prior, returns_matrix, uncertainty_matrix, tickers, model_name):
-    absolute_views = dict(zip(tickers.tolist(), returns_matrix[model_name].tolist()))
-    view_confidences = uncertainty_matrix[model_name].tolist()
+    absolute_views = dict(zip(tickers, returns_matrix[model_name]))
+    view_confidences = uncertainty_matrix[model_name]
     bl = BlackLittermanModel(S, pi=prior, absolute_views=absolute_views, view_confidences=view_confidences)
     rets = bl.bl_returns()
     ef = EfficientFrontier(rets, S)
@@ -27,18 +27,18 @@ def validation(returns, weights, predicted_features, risk_free_rate=0.02, shift=
     return actual_features, distance
 
 def get_closest(S, prior, returns_matrix, uncertainty_matrix, returns, tickers, risk_free_rate=0.02, shift=100, model_names=['Linear Regression', 'Random Forest', 'XGBoost']):
-    min_distance = float.inf
+    min_distance = float('inf')
     for model_name in model_names:
         views, weights, predicted_features = Blacklitterman_weights(S, prior, returns_matrix, uncertainty_matrix, tickers, model_name)
         actual_features, distance = validation(returns, weights, predicted_features, risk_free_rate, shift)
-        if np.mean(distance) < min_distance:
-            min_distance = np.mean(distance)
+        mean_distance = np.mean(distance)
+        if mean_distance < min_distance:
+            min_distance = mean_distance
             min_views = views
             min_actual_features = actual_features
-            min_distance = distance
     return min_views, min_actual_features, min_distance
 
-def Blacklitterman_test(absolute_views, view_confidences, tickers, start_date="2021-12-31", end_date="2024-03-31", verbose=True):
+def Blacklitterman_test(absolute_views, view_confidences, tickers, start_date="2022-12-31", end_date="2024-03-31", verbose=True):
     ohlc = yf.download(tickers, start=start_date, end=end_date)
     prices = ohlc["Adj Close"]
     S = risk_models.CovarianceShrinkage(prices).ledoit_wolf()
