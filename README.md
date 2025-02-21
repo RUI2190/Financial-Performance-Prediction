@@ -17,11 +17,11 @@ We picked **stock price return** as the proxy for the two matrices mentioned abo
 3. Neural Network Model: Monte Carlo Dropout
 
 # User Interface
-Companies preferences
-Stock preferences
-Expected Return
-Acceptable Risk
-time
+- Adjust your Company Preferences
+- Choose your Stock Preferences
+- Set your Expected Return
+- Define your Acceptable Risk Level
+- Select your Time Horizon
 
 # Repositories used:
 https://github.com/robertmartin8/PyPortfolioOpt
