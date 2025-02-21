@@ -16,21 +16,13 @@ We picked **stock price return** as the proxy for the two matrices mentioned abo
 2. Machine Learning Models: Linear Regression, Random Forest, XGBoost
 3. Neural Network Model: Monte Carlo Dropout
 
-
-## Baseline Result
-
-## Short / Long term suggestion
-
-
 # User Interface
 Companies preferences
 Stock preferences
 Expected Return
 Acceptable Risk
-time??
+time
 
-
-# API
 # Repositories used:
 https://github.com/robertmartin8/PyPortfolioOpt
 https://nbviewer.org/github/Marigold/universal-portfolios/blob/master/modern-portfolio-theory.ipynb
